@@ -19,15 +19,17 @@ function generatePassword() {
 	var userLength = prompt(
 		"How many characters would you like your password to be? (please choose a number between 8 and 128)"
 	);
-
+	console.log("User password length: " + userLength);
 	// Validate user input for password length
 	var passwordLength = 0;
 
 	function lengthValid(input) {
 		if (isNaN(input)) {
+			console.log("Invalid user entry");
 			userLength = prompt("You must enter a number between 8 and 128");
 			return 0;
 		} else if (input < 8 || input > 128) {
+			console.log("Invalid user entry");
 			userLength = prompt("You must enter a number between 8 and 128");
 			return 0;
 		} else {
@@ -37,19 +39,25 @@ function generatePassword() {
 
 	while (passwordLength === 0) {
 		passwordLength = lengthValid(userLength);
+		console.log("User password length: " + userLength);
 	}
+	console.log("Password length will be: " + passwordLength);
 
 	// Confirm lowercase and sets variable
 	var lowercase = confirm("Would you like lowercase letters in your password?");
+	console.log("lowercase: " + lowercase);
 
 	// Confirm uppercase and sets variable
 	var uppercase = confirm("Would you like uppercase letters in your password?");
+	console.log("uppercase: " + uppercase);
 
 	// Confirm numbers and sets variable
 	var numbers = confirm("Would you like numbers in your password?");
+	console.log("numbers: " + numbers);
 
 	// Confirm special characters and sets variable
 	var special = confirm("Would you like special characters in your password?");
+	console.log("special characters: " + special);
 
 	// Create list of characters to select for password
 	var charactersAvailable = "";
@@ -58,17 +66,14 @@ function generatePassword() {
 	if (lowercase) {
 		charactersAvailable += "abcdefghijklmnopqrstuvwxyz";
 	}
-	console.log(charactersAvailable);
 
 	if (uppercase) {
 		charactersAvailable += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	}
-	console.log(charactersAvailable);
 
 	if (numbers) {
 		charactersAvailable += "1234567890";
 	}
-	console.log(charactersAvailable);
 
 	// Special characters used from Password Special Characters list from OWASP.org
 	if (special) {
@@ -76,7 +81,26 @@ function generatePassword() {
 	}
 	console.log(charactersAvailable);
 
-	// Create loop to generate each character of password and concatenate onto previous characters
+	// Validate charactersAvailable is not empty
+	if (charactersAvailable.length === 0) {
+		alert(
+			"You must use AT LEAST ONE of lowercase, uppercase, numbers, or special characters. Please start again."
+		);
+		console.log("No characters available to create password. Function ending.");
+		return;
+	}
+
+	// Create loop to pick each character of password and concatenate onto previous characters
+	var newPassword = "";
+	console.log(newPassword);
+
+	for (i = 0; i < passwordLength; i++) {
+		var nextCharacter = charactersAvailable.charAt(
+			Math.floor(Math.random() * charactersAvailable.length)
+		);
+		newPassword += nextCharacter;
+		console.log(newPassword);
+	}
 
 	// Return generated password
 }

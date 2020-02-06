@@ -46,6 +46,8 @@ The following image demonstrates the application functionality:
 
 - Script interaction with HTML provided as basis for work (noted in script comments)
 
+- Console Logs are included in script so developpers can follow script step-by-step
+
 ### URL of deployed application:
 
 link here
