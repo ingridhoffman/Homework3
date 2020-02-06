@@ -103,4 +103,5 @@ function generatePassword() {
 	}
 
 	// Return generated password
+	return newPassword;
 }
