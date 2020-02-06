@@ -46,10 +46,6 @@ The following image demonstrates the application functionality:
 
 - Script interaction with HTML provided (noted in script comments)
 
-## Review
+### URL of deployed application:
 
-You are required to submit the following for review:
-
-- The URL of the deployed application.
-
-- The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+link here
