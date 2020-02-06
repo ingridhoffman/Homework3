@@ -44,7 +44,7 @@ The following image demonstrates the application functionality:
 
 - Responsively designed HTML and CSS provided as basis for work
 
-- Script interaction with HTML provided (noted in script comments)
+- Script interaction with HTML provided as basis for work (noted in script comments)
 
 ### URL of deployed application:
 
