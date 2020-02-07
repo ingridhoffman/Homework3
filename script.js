@@ -19,63 +19,62 @@ function generatePassword() {
 	var userLength = prompt(
 		"How many characters would you like your password to be? (please choose a number between 8 and 128)"
 	);
-	console.log("User password length: " + userLength);
+
 	// Validate user input for password length
-	var passwordLength = 0;
-
-	function lengthValid(input) {
-		if (isNaN(input)) {
+	function lengthValid() {
+		console.log("User entered: " + userLength);
+		if (isNaN(userLength)) {
 			console.log("Invalid user entry");
-			userLength = prompt("You must enter a number between 8 and 128");
-			return 0;
-		} else if (input < 8 || input > 128) {
+			userLength = prompt(
+				"Your entry must be a number. (please choose a number between 8 and 128)"
+			);
+			lengthValid();
+		} else if (!Number.isInteger(parseFloat(userLength))) {
 			console.log("Invalid user entry");
-			userLength = prompt("You must enter a number between 8 and 128");
-			return 0;
-		} else {
-			return input;
+			userLength = prompt(
+				"Your entry must be a whole number. (please choose a number between 8 and 128)"
+			);
+			lengthValid(userLength);
+		} else if (userLength < 8 || userLength > 128) {
+			console.log("Invalid user entry");
+			userLength = prompt(
+				"Your entry is too big or too small. (please choose a number between 8 and 128)"
+			);
+			lengthValid();
 		}
+		return userLength;
 	}
-
-	while (passwordLength === 0) {
-		passwordLength = lengthValid(userLength);
-		console.log("User password length: " + userLength);
-	}
+	var passwordLength = lengthValid();
 	console.log("Password length will be: " + passwordLength);
 
-	// Confirm lowercase and sets variable
+	// Confirm lowercase and set variable
 	var lowercase = confirm("Would you like lowercase letters in your password?");
 	console.log("lowercase: " + lowercase);
 
-	// Confirm uppercase and sets variable
+	// Confirm uppercase and set variable
 	var uppercase = confirm("Would you like uppercase letters in your password?");
 	console.log("uppercase: " + uppercase);
 
-	// Confirm numbers and sets variable
+	// Confirm numbers and set variable
 	var numbers = confirm("Would you like numbers in your password?");
 	console.log("numbers: " + numbers);
 
-	// Confirm special characters and sets variable
+	// Confirm special characters and set variable
 	var special = confirm("Would you like special characters in your password?");
 	console.log("special characters: " + special);
 
 	// Create list of characters to select for password
 	var charactersAvailable = "";
-	console.log(charactersAvailable);
 
 	if (lowercase) {
 		charactersAvailable += "abcdefghijklmnopqrstuvwxyz";
 	}
-
 	if (uppercase) {
 		charactersAvailable += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	}
-
 	if (numbers) {
 		charactersAvailable += "1234567890";
 	}
-
-	// Special characters used from Password Special Characters list from OWASP.org
 	if (special) {
 		charactersAvailable += " !#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 	}
@@ -90,9 +89,8 @@ function generatePassword() {
 		return;
 	}
 
-	// Create loop to pick each character of password and concatenate onto previous characters
+	// Create loop to pick each character of password until password is specified length
 	var newPassword = "";
-	console.log(newPassword);
 
 	for (i = 0; i < passwordLength; i++) {
 		var nextCharacter = charactersAvailable.charAt(

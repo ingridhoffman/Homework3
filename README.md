@@ -48,6 +48,8 @@ The following image demonstrates the application functionality:
 
 - Console Logs are included in script so developpers can follow script step-by-step
 
+- Special characters used from Password Special Characters list provided by OWASP.org - did not use " because it caused issues with script
+
 ### URL of deployed application:
 
-link here
+https://ingridhoffman.github.io/Homework3/
