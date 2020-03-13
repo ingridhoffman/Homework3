@@ -1,6 +1,6 @@
-# Homework3
+# Password Generator
 
-JavaScript random password generator
+Homework3: JavaScript random password generator
 
 ## Assignment
 
@@ -52,4 +52,4 @@ The following image demonstrates the application functionality:
 
 ### URL of deployed application:
 
-https://ingridhoffman.github.io/Homework3/
+https://ingridhoffman.github.io/PasswordGenerator/
