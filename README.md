@@ -37,7 +37,7 @@ THEN the password is either displayed in an alert or written to the page
 
 # Developer Notes
 
-<img src="https://github.com/ingridhoffman/PasswordGenerator/blob/master/Assets/ingridhoffman.github.io_PasswordGenerator_.png" width="90%">
+<img src="https://github.com/ingridhoffman/PasswordGenerator/blob/master/Assets/Untitled_%20May%207%2C%202020%201_50%20PM.gif" width="90%">
 
 * Console Logs are included in script so developers can follow script step-by-step
 
