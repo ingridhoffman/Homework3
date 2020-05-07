@@ -1,14 +1,13 @@
 # Password Generator
+### Homework3: JavaScript random password generator
 
-Homework3: JavaScript random password generator
-
-## Assignment
+# Assignment
 
 Create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
 
-If you are unfamiliar with special characters, take a look at [some examples](https://www.owasp.org/index.php/Password_special_characters).
+![password generator demo](./Assets/03-javascript-homework-demo.png)
 
-## User Story
+### User Story
 
 ```
 AS AN employee with access to sensitive data
@@ -16,7 +15,7 @@ I WANT to randomly generate a password that meets certain criteria
 SO THAT I can create a strong password that provides greater security
 ```
 
-## Acceptance Criteria
+### Acceptance Criteria
 
 ```
 GIVEN I need a new, secure password
@@ -36,20 +35,17 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 ```
 
-The following image demonstrates the application functionality:
+# Developer Notes
 
-![password generator demo](./Assets/03-javascript-homework-demo.png)
+<img src="https://github.com/ingridhoffman/PasswordGenerator/blob/master/Assets/ingridhoffman.github.io_PasswordGenerator_.png" width="90%">
 
-## Development Notes
+* Console Logs are included in script so developers can follow script step-by-step
 
-- Responsively designed HTML and CSS provided as basis for work
+* Special characters used from Password Special Characters list provided by OWASP.org (although I did not use double quotation marks because it created conflicts with script)
 
-- Script interaction with HTML provided as basis for work (noted in script comments)
+### Credits
+Responsively designed HTML and CSS ass well as script interaction with HTML provided as basis for work (noted in script comments) by: © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved
 
-- Console Logs are included in script so developpers can follow script step-by-step
-
-- Special characters used from Password Special Characters list provided by OWASP.org - did not use " because it caused issues with script
-
-### URL of deployed application:
+### Deployed Application
 
 https://ingridhoffman.github.io/PasswordGenerator/
